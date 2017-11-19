@@ -1,9 +1,28 @@
+body{
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: #fff;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
 header {
     padding: 50px 0px 20px 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-image: url(images/naomi-hebert-188443.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: hard-light;
+    background-color: rgba(10, 103, 197,1);
 }
 
 header h1 {
     text-align: center;
+    font-weight: bold;
+    color: #fff;
 }
 
 iframe {
@@ -12,11 +31,12 @@ iframe {
 
 .diagram-min-height {
     min-height: 1100px;
+    position: relative;
+    margin: 0 auto;
 }
 
 .diagram-index-bg {
     z-index: 0;
-    position: absolute;
     width: 1000px;
     height: 1000px;
 }
@@ -30,23 +50,26 @@ iframe {
 }
 
 #one {
-    transform: translate(472px, 192px);
-    background-color: rgba(150,150,150, 1);
+    transform: translate(526px, 192px);
+    background-color: rgba(255,100,100, 1);
     opacity: 0;
 } 
 
 #two {
-    transform: translate(226px, 482px);
-    background-color: rgba(150,150,150, 1);
+    transform: translate(253px, 482px);
+    background-color: rgba(255,100,100, 1);
+    opacity: 0;
 }
 
 #three {
-    transform: translate(698px, 483px);
-    background-color: rgba(150,150,150, 1);
+    transform: translate(778px, 483px);
+    background-color: rgba(255,100,100, 1);
+    opacity: 0;
 }
 
 #four {
-    transform: translate(474px, 741px);
-    background-color: rgba(150,150,150, 1);
+    transform: translate(528px, 741px);
+    background-color: rgba(255,100,100, 1);
+    opacity: 0;
 }
 
