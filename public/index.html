@@ -11,22 +11,43 @@
         <script>
             var socket = io.connect('//localhost:3030');
             //listen for data on websocket called my socket
-            socket.on('mysocket', function(data) {
+            socket.on('mqtt', function(data) {
                 console.log(data);
                 //Jquery has getters and setters
-                if(data == "on"){
-                     $("#one").animate({opacity: 1.0}, 1000);
-                } else{
-                     $("#one").animate({opacity: 0.0}, 1000);
+                if(data.topic == "/mytopic"){
+                    if(data.message == "LED on"){
+                        $("#one").animate({opacity: 1.0}, 1000);
+                    } else{
+                        $("#one").animate({opacity: 0.0}, 1000);
+                    }
+                }
+                if(data.topic == "/clock"){
+                    if(data.message == "clock on"){
+                        $("#three").animate({opacity: 1.0}, 1000);
+                    } else{
+                        $("#three").animate({opacity: 0.0}, 1000);
+                    }
+                }
+                if(data.topic == "/fan"){
+                    if(data.message == "fan on"){
+                        $("#four").animate({opacity: 1.0}, 1000);
+                    } else{
+                        $("#four").animate({opacity: 0.0}, 1000);
+                    }
+                }
+                if(data.topic == "/tft"){
+                    if(data.message == "tft on"){
+                        $("#two").animate({opacity: 1.0}, 1000);
+                    } else{
+                        $("#two").animate({opacity: 0.0}, 1000);
+                    }
                 }
                 
             });
             socket.on('error', function() {
                 console.error(arguments)
             });
-        </script>
-        <script>
-            $()
+            
         </script>
     </head>
     
